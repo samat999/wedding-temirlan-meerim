@@ -1,0 +1,1084 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сайт-приглашение</title>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://samat999.github.io/wedding-temirlan-meerim/">
+  <meta property="og:title" content="Сайт-приглашение на свадьбу Темирлан и Мээрим">
+  <meta property="og:description" content="Дорогие гости! Приглашаем вас на нашу свадьбу. Все детали по ссылке.">
+  <meta property="og:image" content="https://samat999.github.io/wedding-temirlan-meerim/main-timafon.jpg">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://samat999.github.io/wedding-temirlan-meerim/">
+  <meta name="twitter:title" content="Сайт-приглашение на свадьбу Темирлан и Мээрим">
+  <meta name="twitter:description" content="Дорогие гости! Приглашаем вас на нашу свадьбу. Все детали по ссылке.">
+  <meta name="twitter:image" content="https://samat999.github.io/wedding-temirlan-meerim/main-timafon.jpg">
+  <!-- Подключение всех нужных шрифтов с поддержкой кириллицы -->
+  <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap&subset=cyrillic" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap&subset=cyrillic" rel="stylesheet">
+  <style>
+    /* Классы для разных шрифтов */
+    html, body {
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden !important;
+      /* overflow-y не трогаем, чтобы вертикальный скролл работал */
+    }
+    body {
+      font-family: 'Montserrat', Arial, sans-serif;
+      background: url('tfon6.jpeg') center center/cover no-repeat;
+      min-height: 100vh;
+    }
+    .handwritten {
+      font-family: 'Marck Script', cursive;
+    }
+    .accent {
+      font-family: 'Neucha', cursive;
+    }
+    .title {
+      font-family: 'Playfair Display', serif;
+      font-weight: 700;
+    }
+    /* Основная структура */
+    .main-wrapper {
+      display: flex;
+      flex-direction: row;
+      gap: 32px;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      padding: 40px 0;
+      box-sizing: border-box;
+    }
+    .card {
+      background: transparent;
+      border-radius: 24px;
+      box-shadow: none;
+      padding: 36px 28px;
+      max-width: 340px;
+      min-width: 280px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    /* Вертикальный блок с главным фото и мини-фотолентой */
+    .vertical-photo-block {
+      width: 10px;
+      margin: 7400 auto;
+      border-radius: 18px;
+      overflow: hidden;
+      background: transparent;
+      box-shadow: none;
+      display: flex;
+      flex-direction: column;
+    }
+    .main-photo-area {
+      position: relative;
+      width: 100%;
+      height: 840px;
+      overflow: hidden;
+    }
+    .main-photo {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .main-names {
+      position: absolute;
+      top: 34px;
+      left: 0;
+      width: 100%;
+      text-align: center;
+      color: #fff !important;
+      font-size: 3.1rem;
+      font-family: 'Dancing Script', cursive;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      text-shadow: 0 2px 10px #444;
+      pointer-events: none;
+      line-height: 1.1;
+      background: none;
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: initial;
+      padding: 0;
+      text-transform: none;
+    }
+    .main-names::selection {
+      background: transparent;
+      color: inherit;
+    }
+    .info-block {
+      background: transparent;
+      padding: 24px 18px 18px 18px;
+      text-align: center;
+    }
+    .info-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    .info-text {
+      font-size: 1rem;
+      color: #444;
+      margin-bottom: 18px;
+    }
+    .mini-photo-section {
+      width: 100%;
+      margin-bottom: 8px;
+    }
+    .mini-photo-instruction {
+      color: #7a6a5a;
+      font-size: 1.04em;
+      margin-bottom: 6px;
+      letter-spacing: 0.01em;
+      opacity: 0.85;
+    }
+    .mini-photo-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 8px;
+      justify-items: center;
+    }
+    .mini-photo {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 8px;
+      background: #e0e0e0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      max-width: 170px;
+      max-height: 170px;
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .mini-photo.zoomed {
+      z-index: 20;
+      transform: scale(1.95) !important;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.22);
+      position: relative;
+    }
+    .mini-photo-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      z-index: 1;
+    }
+    .mini-photo-wrapper.show-desc {
+      z-index: 21;
+    }
+    .mini-photo-desc {
+      display: none;
+      margin-top: 10px;
+      font-size: 1em;
+      color: #6a4c3b;
+      background: rgba(255,255,255,0.97);
+      border-radius: 7px;
+      padding: 6px 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      min-width: 90px;
+      max-width: 180px;
+      text-align: center;
+      z-index: 22;
+      position: relative;
+      transition: opacity 0.4s;
+    }
+    .mini-photo-wrapper.show-desc .mini-photo-desc {
+      display: block;
+      animation: fadeInDesc 0.5s;
+    }
+    @keyframes fadeInDesc {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: none; }
+    }
+    .section-title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem;
+      margin: 18px 0 8px 0;
+      text-align: center;
+      font-weight: 400;
+    }
+    .button {
+      background: #aeb8a6;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      padding: 10px 22px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 18px 0 0 0;
+      transition: background 0.2s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: #8d9b85;
+    }
+    .palette {
+      display: flex;
+      gap: 8px;
+      margin: 12px 0 18px 0;
+      justify-content: center;
+    }
+    .palette-dot {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 2px solid #fff;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+    @media (max-width: 900px) {
+      .main-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        padding: 0 !important;
+        margin: 0 !important;
+        width: 100%;
+      }
+      .main-photo-area {
+        width: 100%;
+        height: 100vh;
+        min-height: 700px;
+        max-height: 100vw;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      .main-photo {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      .vertical-photo-block {
+        width: 100%;
+        min-width: 0;
+        border-radius: 0;
+        margin: 0;
+        padding: 0;
+        margin-top: 0;
+      }
+      .info-block,
+      .calendar-block,
+      .childhood-photos {
+        margin-top: 32px;
+      }
+      .mini-photo-section { margin-bottom: 8px; }
+      .mini-photo-instruction { font-size: 1em; }
+      .mini-photo-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 7px;
+      }
+      .mini-photo {
+        max-width: 140px;
+        max-height: 140px;
+      }
+      .mini-photo.zoomed {
+        transform: scale(1.85) !important;
+      }
+      .mini-photo-desc {
+        font-size: 0.97em;
+        min-width: 60px;
+        max-width: 95vw;
+        padding: 4px 7px;
+      }
+    }
+    /* Таймер-отсчёт */
+    .countdown-block {
+      margin: 32px 0 0 0;
+      text-align: center;
+    }
+    .countdown-timer {
+      font-size: 2.2rem;
+      font-family: 'Montserrat', Arial, sans-serif;
+      font-weight: 900;
+      margin-top: 8px;
+      letter-spacing: 0.08em;
+      color: #222;
+      background: none;
+      border: none;
+      box-shadow: none;
+      padding: 0;
+      line-height: 1.2;
+      display: block;
+    }
+    .countdown-labels {
+      font-size: 1.1rem;
+      color: #888;
+      margin-top: 2px;
+      letter-spacing: 0.04em;
+      display: flex;
+      justify-content: center;
+      gap: 18px;
+    }
+    .countdown-labels span {
+      min-width: 60px;
+      display: inline-block;
+      text-align: center;
+    }
+    /* Календарь */
+    .calendar-block {
+      margin: 32px 0 0 0;
+      text-align: center;
+    }
+    .calendar-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 1.1rem;
+      color: #444;
+    }
+    .calendar-table th, .calendar-table td {
+      padding: 4px 8px;
+      text-align: center;
+      border-radius: 50%;
+      position: relative;
+    }
+    .calendar-pulse {
+      background: none;
+      color: #c35009;
+      font-weight: 1000;
+      position: relative;
+      text-align: center;
+    }
+    .calendar-pulse-number {
+      position: relative;
+      z-index: 2;
+      font-size: 1.1em;
+      color: #c35009;
+      font-weight: 1000;
+      display: inline-block;
+    }
+    .heart-pulse svg {
+      position: absolute;
+      left: 80%;
+      top: 30%;
+      transform: translate(-50%, -60%) scale(1);
+      animation: heart-pulse 1.2s infinite;
+      z-index: 1;
+      pointer-events: none;
+    }
+    @keyframes heart-pulse {
+      0% { transform: translate(-50%, -60%) scale(1); }
+      20% { transform: translate(-50%, -60%) scale(1.3); }
+      40% { transform: translate(-60%, -60%) scale(1); }
+      60% { transform: translate(-50%, -80%) scale(1.3); }
+      100% { transform: translate(-50%, -60%) scale(1); }
+    }
+    /* Анимация появления при скролле */
+    .reveal-on-scroll {
+      opacity: 0;
+      transition: opacity 0.7s cubic-bezier(.4,0,.2,1);
+    }
+    .reveal-on-scroll.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+    /* Адаптивный фон для мобильных */
+    @media (max-width: 800px) {
+      body {
+        background: url('tfon6.jpeg') center top no-repeat;
+        background-size: 100% 100%;
+        min-height: 100vh;
+      }
+    }
+    /* Эффект приближения для мини-фото */
+    .zoom-on-click {
+      transition: transform 0.6s cubic-bezier(.4,0,.2,1), box-shadow 0.6s;
+      cursor: pointer;
+    }
+    .zoom-on-click.zoomed {
+      z-index: 10;
+      transform: scale(1.12) rotate(0deg);
+      box-shadow: 0 12px 32px rgba(0,0,0,0.18);
+    }
+    /* Эффект для детских фото (glow + border + подъём) */
+    .polaroid.child-effect {
+      border: 3px solid #ffb347;
+      box-shadow: 0 0 24px 0 #ffe0b2, 0 8px 32px rgba(0,0,0,0.13);
+      border-radius: 24px;
+      transform: translateY(-12px) scale(1.04) rotate(0deg);
+      transition: border 0.4s, box-shadow 0.6s, border-radius 0.4s, transform 0.6s cubic-bezier(.4,0,.2,1);
+    }
+    /* Детские фото в стиле полароид */
+    .childhood-photos {
+      margin: 140px 0 0 0;
+      text-align: center;
+    }
+    .childhood-title {
+      font-size: 1.2rem;
+      margin-bottom: 12px;
+    }
+    .childhood-polaroids {
+      display: flex;
+      gap: 18px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    /* Убираю .polaroid рамку и делаю детские фото как мини-фото */
+    .childhood-polaroids img {
+      width: 100%;
+      max-width: 170px;
+      max-height: 170px;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      background: #e0e0e0;
+      margin-bottom: 0;
+      padding: 0;
+      transition: box-shadow 0.3s;
+    }
+    @media (max-width: 900px) {
+      .childhood-polaroids img {
+        max-width: 140px;
+        max-height: 140px;
+      }
+      .childhood-photos {
+        margin: 90px 0 0 0;
+      }
+    }
+    .polaroid {
+      background: none !important;
+      border: none !important;
+      box-shadow: none !important;
+      padding: 0 !important;
+      width: auto !important;
+      border-radius: 0 !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 0 !important;
+      position: static !important;
+      transition: none !important;
+    }
+    /* Модальное окно для увеличенного фото */
+    .photo-modal-overlay {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0; top: 0; right: 0; bottom: 0;
+      background: rgba(30, 24, 24, 0.72);
+      justify-content: center;
+      align-items: center;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .photo-modal-overlay.active {
+      display: flex;
+      animation: fadeInModal 0.3s;
+      pointer-events: auto;
+    }
+    @keyframes fadeInModal {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .photo-modal-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 92vw;
+      max-height: 92vh;
+    }
+    .photo-modal-img, .photo-modal-desc {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.5s cubic-bezier(.4,0,.2,1), transform 0.5s cubic-bezier(.4,0,.2,1);
+    }
+    .photo-modal-overlay.active .photo-modal-img, .photo-modal-overlay.active .photo-modal-desc {
+      opacity: 1;
+      transform: scale(1);
+    }
+    .photo-modal-img {
+      max-width: 100vw;
+      max-height: 100vh;
+      border-radius: 14px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.22);
+      background: #fff;
+      margin-bottom: 18px;
+      object-fit: contain;
+    }
+    .photo-modal-desc {
+      color: #3d2a1a;
+      background: rgba(255,255,255,0.97);
+      border-radius: 8px;
+      padding: 8px 18px;
+      font-size: 1.08em;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      max-width: 80vw;
+    }
+    @media (max-width: 700px) {
+      .photo-modal-img {
+        max-width: 100vw;
+        max-height: 95vw;
+      }
+      .photo-modal-desc {
+        font-size: 0.98em;
+        padding: 6px 8px;
+      }
+    }
+    input, textarea, select {
+      font-size: 16px !important;
+    }
+    /* Стили для аудио плеера */
+    .audio-player {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 10px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+    .audio-player:hover {
+      transform: scale(1.1);
+    }
+    .audio-player.playing {
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      100% { transform: scale(1); }
+    }
+    /* Стили для горизонтального таймера */
+    .horizontal-timer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #222;
+      margin-top: 8px;
+      letter-spacing: 0.08em;
+    }
+    .timer-block {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .timer-block .label {
+      font-size: 0.6rem;
+      color: #888;
+      margin-top: 2px;
+    }
+    .horizontal-timer .sep {
+      font-size: 1.5rem;
+      color: #888;
+    }
+    .dresscode-circles {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin: 24px 0;
+    }
+    .dresscode-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .dresscode-item img {
+      width: 90px;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid #e3d7c9;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+      margin-bottom: 8px;
+    }
+    .dresscode-item .label {
+      font-size: 1rem;
+      color: #7a6a5a;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .dresscode-circles {
+        gap: 12px;
+      }
+      .dresscode-item img {
+        width: 60px;
+        height: 60px;
+      }
+    }
+    .details-block {
+      font-size: 1.08rem;
+      line-height: 1.5;
+      background: none;
+      border-radius: 0;
+      padding: 0;
+      margin-top: 10px;
+      margin-bottom: 22px;
+      box-shadow: none;
+      display: block;
+      max-width: 98vw;
+    }
+    .waiting-block {
+      font-size: 1.18rem;
+      color: #7a6a5a;
+      font-family: 'Dancing Script', cursive;
+      font-weight: 600;
+      margin: 32px 0 24px 0;
+      text-align: center;
+      letter-spacing: 0.01em;
+    }
+    @media (max-width: 600px) {
+      .details-block {
+        font-size: 0.98rem;
+        padding: 0;
+      }
+      .waiting-block {
+        font-size: 1.05rem;
+        margin: 24px 0 18px 0;
+      }
+    }
+    .title, .main-names, .info-title, .info-text, .waiting-block, .calendar-block, .calendar-table, .countdown-block, .countdown-timer, .horizontal-timer, .timer-block, .section-title, .label {
+      color: #222 !important;
+      font-weight: 700;
+      text-shadow: 0 2px 10px #fff, 0 1px 0 #fff;
+    }
+    .calendar-table th, .calendar-table td {
+      color: #222 !important;
+      font-weight: 700;
+      text-shadow: 0 2px 10px #fff, 0 1px 0 #fff;
+    }
+    .block-bg {
+      background: rgba(255,255,255,0.55);
+      border-radius: 18px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 18px 12px;
+      margin-bottom: 18px;
+    }
+    @media (max-width: 600px) {
+      .block-bg {
+        padding: 10px 4px;
+        border-radius: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Добавляем аудио элемент -->
+  <audio id="bgMusic" loop muted>
+    <source src="music33.mp3" type="audio/mpeg">
+  </audio>
+  <div class="audio-player" id="audioPlayer" title="Включить/выключить музыку">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 3v18M8 7v10M16 7v10" stroke="#7a6a5a" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div class="main-wrapper">
+    <!-- Главное фото hero -->
+    <div class="main-photo-area reveal-on-scroll">
+      <img class="main-photo reveal-on-scroll" src="timafon.jpg" alt="Главное фото">
+      <div class="main-names reveal-on-scroll" style="color:#fff !important; text-shadow:0 4px 18px #444, 0 1px 0 #888;">
+        Темирлан<br>& Мээрим
+      </div>
+    </div>
+    <!-- Левая карточка (контент ниже фото) -->
+    <div class="vertical-photo-block">
+      <div class="info-block reveal-on-scroll">
+        <div class="info-title title reveal-on-scroll">Дорогие близкие<br>и родные!</div>
+        <div class="info-text accent reveal-on-scroll">
+          Мы с радостью приглашаем вас на нашу свадьбу!<br>
+          Пусть этот день станет незабываемым — вместе с вами.<br>
+          <span style="font-size:1.2em;">&#10048;&#10048;</span>
+        </div>
+        <div class="mini-photo-section">
+          <div class="mini-photo-instruction accent" style="text-align:center; margin-bottom:6px; font-size:1.04em;">Нажми на фото</div>
+          <div class="mini-photo-grid">
+            <div class="mini-photo-wrapper">
+              <img src="tima1.jpeg" class="mini-photo reveal-on-scroll zoom-on-click" alt="Фото 1" data-desc="Это мы впервые на свадьбе друзей">
+              <div class="mini-photo-desc accent"></div>
+            </div>
+            <div class="mini-photo-wrapper">
+              <img src="tima2.JPG" class="mini-photo reveal-on-scroll zoom-on-click" alt="Фото 2" data-desc="Наши ночные катания по городу">
+              <div class="mini-photo-desc accent"></div>
+            </div>
+            <div class="mini-photo-wrapper">
+              <img src="tima3.PNG" class="mini-photo reveal-on-scroll zoom-on-click" alt="Фото 3" data-desc="Место где я попросил её руки и сердца">
+              <div class="mini-photo-desc accent"></div>
+            </div>
+            <div class="mini-photo-wrapper">
+              <img src="tima4.JPG" class="mini-photo reveal-on-scroll zoom-on-click" alt="Фото 4" data-desc="День когда мы начали встречаться">
+              <div class="mini-photo-desc accent"></div>
+            </div>
+          </div>
+        </div>
+        <!-- Таймер -->
+        <div class="countdown-block reveal-on-scroll">
+          <div class="title" style="margin-top:24px;">До свадьбы осталось:</div>
+          <div id="countdown" class="horizontal-timer"></div>
+        </div>
+        <div class="calendar-block reveal-on-scroll">
+          <div class="title" style="margin-top:24px;">Август 2025</div>
+          <table class="calendar-table">
+            <tr><th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th></tr>
+            <tr><td></td><td></td><td></td><td></td><td>1</td><td>2</td><td>3</td></tr>
+            <tr><td>4</td><td>5</td>
+              <td class="calendar-pulse">
+                <span class="heart-pulse">
+                  <svg viewBox="0 0 24 24" width="28" height="28" style="vertical-align:middle;">
+                    <path d="M12 21s-6.7-5.2-9.2-8.2C-1.2 8.2 2.4 3.5 7.1 5.1c1.7.6 2.9 2.1 2.9 2.1s1.2-1.5 2.9-2.1c4.7-1.6 8.3 3.1 4.3 7.7C18.7 15.8 12 21 12 21z" fill="#c35009"/>
+                  </svg>
+                </span>
+                <span class="calendar-pulse-number">6</span>
+              </td>
+              <td>7</td><td>8</td><td>9</td><td>10</td></tr>
+            <tr><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td></tr>
+            <tr><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td><td>24</td></tr>
+            <tr><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td><td>31</td></tr>
+          </table>
+        </div>
+        <div class="childhood-photos reveal-on-scroll">
+          <div class="childhood-title accent">Наши детские фото</div>
+          <div class="childhood-polaroids">
+            <div class="polaroid zoom-on-click">
+              <img src="bala1.JPG" alt="Темпося">
+              <div class="mini-photo-instruction accent" style="text-align:center; margin-bottom:6px; font-size:1.04em;">Нажми на фото</div>
+            </div>
+            <div class="polaroid zoom-on-click">
+              <img src="bala2.JPG" alt="Мекусь">
+              <div class="mini-photo-instruction accent" style="text-align:center; margin-bottom:6px; font-size:1.04em;">Нажми на фото</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- Правая карточка -->
+    <div class="card reveal-on-scroll">
+      <div class="section-title title reveal-on-scroll" style="margin-bottom:8px;">Банкет</div>
+      <div class="reveal-on-scroll" style="text-align:center; margin-bottom:8px;">
+        06.08 Август | 17:00<br>
+        "Ресторан Бак Сарай 
+"<br>
+        Ул : Энгельса улица, 95
+      </div>
+      <a class="button reveal-on-scroll" href="https://2gis.kg/bishkek/geo/70000001063952247/73.893094,42.830217" target="_blank">посмотреть на карте</a>
+      <div class="section-title title reveal-on-scroll" style="margin-top:24px;">Дресс-код</div>
+      <div class="reveal-on-scroll" style="text-align:center; margin-bottom:8px;">
+        Мы будем рады, если ваши наряды поддержат цветовую гамму вечера.
+      </div>
+    </div>
+     <!-- Дресс-код -->
+        <div class="dresscode-label" style="text-align:center; font-size:1.1rem; margin-bottom:8px;">Для женщин</div>
+        <div class="dresscode-circles" style="margin-bottom:18px;">
+          <div class="dresscode-item"><img src="tkan1.jpeg" alt="Для женщин 1"></div>
+          <div class="dresscode-item"><img src="tkan2.jpeg" alt="Для женщин 2"></div>
+          <div class="dresscode-item"><img src="tkan3.jpeg" alt="Для женщин 3"></div>
+          <div class="dresscode-item"><img src="tkan4.jpeg" alt="Для женщин 4"></div>
+        </div>
+        <div class="dresscode-label" style="text-align:center; font-size:1.1rem; margin-bottom:8px;">Для мужчин</div>
+        <div class="dresscode-circles">
+          <div class="dresscode-item"><img src="tkan1.jpeg" alt="Для мужчин 1"></div>
+          <div class="dresscode-item"><img src="tkan4.jpeg" alt="Для мужчин 2"></div>
+          <div class="dresscode-item"><img src="tkan5.jpeg" alt="Для мужчин 3"></div>
+        </div>
+      </div>
+      <div class="section-title title reveal-on-scroll" style="margin-top:24px;">Детали</div>
+      <div class="info-text accent reveal-on-scroll details-block" style="text-align:center; margin-bottom:22px; font-size:1.08rem; line-height:1.5; background:none; box-shadow:none; padding:0; border-radius:0; display:block;">
+        Мы старались сделать праздник незабываемым, поэтому будем рады, если вы подтвердите свое присутствие на торжестве до 06.08.2025
+      </div>
+      <!-- Форма пожеланий -->
+      <form class="reveal-on-scroll" id="wishForm" style="width:100%; max-width:260px; margin:0 auto;">
+        <input type="text" name="name" placeholder="Имя" style="width:100%;margin-bottom:8px;padding:8px;border-radius:6px;border:1px solid #ccc;">
+        <input type="tel" name="phone" placeholder="Телефон" style="width:100%;margin-bottom:8px;padding:8px;border-radius:6px;border:1px solid #ccc;">
+        <div style="margin-bottom:8px;">Вы придете?<br>
+          <label><input type="radio" name="attend" value="Да"> Да</label>
+          <label style="margin-left:12px;"><input type="radio" name="attend" value="Нет"> Нет</label>
+        </div>
+        <input type="text" name="wishes" placeholder="ваши пожелания" style="width:100%;margin-bottom:12px;padding:8px;border-radius:6px;border:1px solid #ccc;">
+        <button class="button" type="submit">Отправить</button>
+        <div id="wishSuccess" style="display:none;color:#2e7d32;font-weight:600;margin-top:10px;">Спасибо! Ваша заявка отправлена.</div>
+        <div id="wishError" style="display:none;color:#c35009;font-weight:600;margin-top:10px;">Ошибка отправки. Попробуйте позже.</div>
+      </form>
+      <div class="reveal-on-scroll waiting-block" style="text-align:center; font-size:1.15rem; color:#7a6a5a; margin:32px 0 24px 0; font-family:'Dancing Script',cursive; font-weight:600;">
+        Ждем вас с нетерпением!<br>
+        <span style="font-size:1.05rem; font-family:'Dancing Script',cursive; font-style:italic; color:#7a6a5a;">Темирлан и Мээрим</span>
+      </div>
+      <div style="height: 80px;"></div>
+    </div>
+  </div>
+  <div class="photo-modal-overlay" id="photoModal">
+    <div class="photo-modal-content">
+      <img src="" alt="Фото" class="photo-modal-img" id="photoModalImg">
+      <div class="photo-modal-desc accent" id="photoModalDesc"></div>
+    </div>
+  </div>
+  <script>
+    // Таймер-отсчёт до 14 августа 2025
+    function updateCountdown() {
+      const target = new Date('2025-08-06T17:00:00');
+      const now = new Date();
+      let diff = target - now;
+      if (diff < 0) diff = 0;
+      const days = Math.floor(diff / (1000*60*60*24));
+      const hours = Math.floor((diff / (1000*60*60)) % 24);
+      const mins = Math.floor((diff / (1000*60)) % 60);
+      const secs = Math.floor((diff / 1000) % 60);
+      function pad(n) { return n.toString().padStart(2, '0'); }
+      let html = `
+        <div class="timer-block">${pad(days)}<div class="label">дн</div></div>
+        <span class="sep">:</span>
+        <div class="timer-block">${pad(hours)}<div class="label">ч</div></div>
+        <span class="sep">:</span>
+        <div class="timer-block">${pad(mins)}<div class="label">мин</div></div>
+        <span class="sep">:</span>
+        <div class="timer-block">${pad(secs)}<div class="label">сек</div></div>
+      `;
+      if (diff === 0) {
+        html = '<span style="font-size:1.2rem;font-weight:700;color:#c35009;">Событие наступило!</span>';
+      }
+      const countdown = document.getElementById('countdown');
+      if (countdown) {
+        countdown.className = 'horizontal-timer';
+        countdown.innerHTML = html;
+      }
+    }
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    // В JS: добавляю плавное исчезновение при закрытии модального окна
+    function closePhotoModalSmooth() {
+      var modal = document.getElementById('photoModal');
+      var modalImg = document.getElementById('photoModalImg');
+      var modalDesc = document.getElementById('photoModalDesc');
+      modalImg.style.opacity = 0;
+      modalImg.style.transform = 'scale(0.92)';
+      modalDesc.style.opacity = 0;
+      modalDesc.style.transform = 'scale(0.92)';
+      setTimeout(function() {
+        modal.classList.remove('active');
+      }, 450); // чуть меньше transition, чтобы не было задержки
+    }
+    document.querySelectorAll('.mini-photo.zoom-on-click').forEach(function(img) {
+      img.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var modal = document.getElementById('photoModal');
+        var modalImg = document.getElementById('photoModalImg');
+        var modalDesc = document.getElementById('photoModalDesc');
+        modalImg.src = img.src;
+        modalDesc.textContent = img.getAttribute('data-desc') || '';
+        modal.classList.add('active');
+        // Сброс анимации
+        modalImg.style.opacity = 0;
+        modalImg.style.transform = 'scale(0.92)';
+        modalDesc.style.opacity = 0;
+        modalDesc.style.transform = 'scale(0.92)';
+        setTimeout(function() {
+          modalImg.style.opacity = 1;
+          modalImg.style.transform = 'scale(1)';
+          modalDesc.style.opacity = 1;
+          modalDesc.style.transform = 'scale(1)';
+        }, 30);
+        // Автоматическое закрытие через 2.5 секунды
+        if (modal._autoCloseTimeout) clearTimeout(modal._autoCloseTimeout);
+        modal._autoCloseTimeout = setTimeout(closePhotoModalSmooth, 2500);
+      });
+    });
+    // Закрытие модального окна по клику вне фото или на фото
+    document.getElementById('photoModal').addEventListener('click', function(e) {
+      if (e.target === this || e.target.classList.contains('photo-modal-img')) {
+        closePhotoModalSmooth();
+        if (this._autoCloseTimeout) clearTimeout(this._autoCloseTimeout);
+      }
+    });
+    // Автоматический эффект glow для детских фото при скролле
+    function glowPolaroidsOnScroll() {
+      const block = document.querySelector('.childhood-photos');
+      if (!block) return;
+      const polaroids = block.querySelectorAll('.polaroid');
+      const rect = block.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+      if (rect.top < windowHeight - 60 && rect.bottom > 60) {
+        polaroids.forEach(el => el.classList.add('child-effect'));
+      } else {
+        polaroids.forEach(el => el.classList.remove('child-effect'));
+      }
+    }
+    window.addEventListener('scroll', glowPolaroidsOnScroll);
+    window.addEventListener('load', glowPolaroidsOnScroll);
+
+    // JS: возвращаю простую анимацию появления при скролле снизу вверх
+    function revealOnScroll() {
+      const reveals = document.querySelectorAll('.reveal-on-scroll');
+      const windowHeight = window.innerHeight;
+      reveals.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < windowHeight - 60) {
+          el.classList.add('visible');
+        } else {
+          el.classList.remove('visible');
+        }
+      });
+    }
+    window.addEventListener('scroll', revealOnScroll);
+    window.addEventListener('load', revealOnScroll);
+
+    // JS: добавляю обработчик для детских фото (childhood-polaroids img)
+    document.querySelectorAll('.childhood-polaroids img').forEach(function(img) {
+      img.addEventListener('click', function(e) {
+        e.stopPropagation();
+        var modal = document.getElementById('photoModal');
+        var modalImg = document.getElementById('photoModalImg');
+        var modalDesc = document.getElementById('photoModalDesc');
+        modalImg.src = img.src;
+        modalDesc.textContent = img.alt || '';
+        modal.classList.add('active');
+        // Сброс анимации
+        modalImg.style.opacity = 0;
+        modalImg.style.transform = 'scale(0.92)';
+        modalDesc.style.opacity = 0;
+        modalDesc.style.transform = 'scale(0.92)';
+        setTimeout(function() {
+          modalImg.style.opacity = 1;
+          modalImg.style.transform = 'scale(1)';
+          modalDesc.style.opacity = 1;
+          modalDesc.style.transform = 'scale(1)';
+        }, 30);
+        // Автоматическое закрытие через 2.5 секунды
+        if (modal._autoCloseTimeout) clearTimeout(modal._autoCloseTimeout);
+        modal._autoCloseTimeout = setTimeout(closePhotoModalSmooth, 2500);
+      });
+    });
+
+    // 1. Убираю zoom-on-click с формы (на всякий случай удаляю класс у всех input, button внутри формы)
+    document.querySelectorAll('form input, form button, form textarea').forEach(function(el) {
+      el.classList.remove('zoom-on-click');
+    });
+    // Удаляю все обработчики submit, которые обновляют страницу
+    // --- Отправка формы пожеланий в Telegram ---
+    document.getElementById('wishForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      var form = e.target;
+      var name = form.name.value.trim();
+      var phone = form.phone.value.trim();
+      var wishes = form.wishes.value.trim();
+      var attend = form.attend.value;
+      var successMsg = document.getElementById('wishSuccess');
+      var errorMsg = document.getElementById('wishError');
+      successMsg.style.display = 'none';
+      errorMsg.style.display = 'none';
+      if (!name || !phone) {
+        errorMsg.textContent = 'Пожалуйста, заполните имя и телефон.';
+        errorMsg.style.display = 'block';
+        return;
+      }
+      var text = `Новая заявка со свадьбы!%0AИмя: ${encodeURIComponent(name)}%0AТелефон: ${encodeURIComponent(phone)}%0AБудет: ${encodeURIComponent(attend || '')}%0AПожелания: ${encodeURIComponent(wishes)}`;
+      var token = '7653350026:AAG398IwkV2JMF-x-df5qnHSqoWNLHyBZhA';
+      var chatId = '737775267';
+      var url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chatId}&text=${text}`;
+      fetch(url)
+        .then(function(res) {
+          if (res.ok) {
+            successMsg.style.display = 'block';
+            form.reset();
+          } else {
+            errorMsg.textContent = 'Ошибка отправки. Попробуйте позже.';
+            errorMsg.style.display = 'block';
+          }
+        })
+        .catch(function() {
+          errorMsg.textContent = 'Ошибка отправки. Попробуйте позже.';
+          errorMsg.style.display = 'block';
+        });
+    });
+
+    // Управление фоновой музыкой
+    const bgMusic = document.getElementById('bgMusic');
+    const audioPlayer = document.getElementById('audioPlayer');
+    let isMusicPlaying = false;
+
+    // Функция для воспроизведения музыки (только play)
+    function playMusic() {
+      if (!isMusicPlaying) {
+        bgMusic.volume = 0.5;
+        bgMusic.muted = false;
+        bgMusic.play().then(() => {
+          isMusicPlaying = true;
+          audioPlayer.classList.add('playing');
+        }).catch(error => {
+          console.log("Ошибка воспроизведения:", error);
+        });
+      }
+    }
+
+    // Функция для паузы музыки (только pause)
+    function pauseMusic() {
+      if (isMusicPlaying) {
+        bgMusic.pause();
+        isMusicPlaying = false;
+        audioPlayer.classList.remove('playing');
+      }
+    }
+
+    // Кнопка-иконка: toggle
+    audioPlayer.addEventListener('click', function() {
+      if (isMusicPlaying) {
+        pauseMusic();
+      } else {
+        playMusic();
+      }
+    });
+
+    // Автовоспроизведение при первом взаимодействии (только play, не toggle!)
+    let started = false;
+    function startMusicOnce() {
+      if (!started) {
+        playMusic();
+        started = true;
+      }
+    }
+    window.addEventListener('scroll', startMusicOnce, { once: true });
+    document.addEventListener('mousemove', startMusicOnce, { once: true });
+    document.addEventListener('touchstart', startMusicOnce, { once: true });
+    document.addEventListener('click', startMusicOnce, { once: true });
+
+    // Сохраняем позицию музыки при уходе со страницы
+    function saveMusicPosition() {
+      if (!bgMusic.paused) {
+        localStorage.setItem('musicTime', bgMusic.currentTime);
+      }
+    }
+    window.addEventListener('beforeunload', saveMusicPosition);
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden) {
+        saveMusicPosition();
+        pauseMusic();
+      }
+    });
+
+    // Восстанавливаем позицию музыки при возврате
+    window.addEventListener('pageshow', function(e) {
+      const savedTime = localStorage.getItem('musicTime');
+      if (savedTime) {
+        bgMusic.currentTime = parseFloat(savedTime);
+      }
+      if (!isMusicPlaying) {
+        playMusic();
+      }
+    });
+  </script>
+</body>
+</html>
